@@ -20,7 +20,6 @@ After your enviroment is created and activated, run:
 Once the requirements are installed, run:
 ## Run Flask server
 * (optional) set flask into development mode. This way changes to the code will update the site automatically
-  * Command on Windows: "set FLASK_ENV=development"
-  * Command on Linux: "export FLASK_ENV=development"
+  * Command on Linux: " export FLASK_APP=app.py"
 * Run command "flask run"
 * Navigate to the link printed in the console
