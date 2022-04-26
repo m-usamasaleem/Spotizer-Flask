@@ -1,0 +1,91 @@
+<style>
+  body,
+  html {
+      height: 100%;
+      margin: 0%;
+      background-position: center;
+  }
+  
+  .bg {
+      /* The image used */
+      background-image: url("static/LANGUAGE2.gif");
+      /* Full height */
+      height: 100%;
+      background-attachment: fixed;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      
+  }
+
+  
+ 
+  @media only screen and (max-device-width: 1366px) {
+        .bg {
+            background-attachment: scroll;
+        }
+    }
+    
+    .speakers {
+        position: relative;
+        
+    }
+    
+    .speakers_transcript {
+      color: white;
+      background-color: black;
+      border-radius: 10px;
+      padding:20px;
+      width: 70%;
+      text-align: center;
+      font-size: 1vw;
+      font-family: Helvetica, sans-serif;
+      top: 50%;
+  left: 50%;
+    }
+
+</style>
+
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+
+{% extends 'base.html' %} {% block title %} Language {% endblock %} {% block content %}
+
+
+
+
+  <div class="bg"><form class="container-sm text-sm-left speakers_transcript" action="{{ url_for('language_predict')}}"method="post">
+
+
+    <h1>What Language is this?</h1>
+
+    <input type="text" name="text" placeholder="Text" required="required" />
+      
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+   <br>
+   <br>
+    
+
+      <div class="container-sm text-sm-left speakers_transcript">
+        <h2 id="speechText">  {{ prediction }}</h2>
+    </div>
+  </form>
+    
+
+
+
+ </div>
+
+
+{% endblock %}
+
+
+
+

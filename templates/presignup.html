@@ -1,0 +1,82 @@
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0%;
+    }
+    
+    .bg {
+        /* The image used */
+        background-image: url("static/prescreen.gif");
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .button4 {
+        background-color: red;
+        color: white;
+        font-size: 2.5vw;
+        margin: 0;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 1vw;
+        font-weight: bold;
+        border-radius: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .speakers_transcript {
+      color: white;
+      background-color: gray;
+      border-radius: 10px;
+      padding:20px;
+      width: 70%;
+      text-align: center;
+      font-size: 1vw;
+      font-family: Helvetica, sans-serif;
+      top: 50%;
+  left: 50%;
+    }
+    .title{
+        color: red;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding: 1vw;
+        font-size: 5.5vw;
+        font-family: 'Courier New', monospace;
+
+    }
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+
+
+{% extends 'base.html' %} {% block title %} Spotizer {% endblock %} {% block content %}
+
+<div class="bg">
+    <br><br><br><br>
+
+<div class="container-sm text-sm-left speakers_transcript">
+
+    <h1 class="title">Spotizer </h1>
+    <p id="speechText">Speaker diarization refers to the process of separating an audio file with various speakers into distinct audio file for each speaker. The partitioning of audio files based on distinct users have various applications across domains. Over the years, various methods have been proposed for speaker diarization. Deep Neural networks in conjunction with deep embeddings such as x-vector have been proven fruitful in such systems as they are able to distinctly identify each user. These systems use time delay neural network architecture, which aids in classifying patterns despite of shift invariance to identify different users. In this project, we have extended the use of the TDNN architecture to perform speaker diarization by implementing ECAPA-TDNN which is an improvement on the previous model. Our results successfully show that the ECAPA-TDNN outperforms the TDNN model.</p>
+  
+    <img class="img-fluid center" src="{{ url_for('static', filename = 'project.png') }}" alt="User Image"> 
+
+</div></div>
+  {% endblock %}

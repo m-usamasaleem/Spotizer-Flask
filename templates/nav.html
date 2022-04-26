@@ -1,0 +1,7 @@
+{% from 'bootstrap4/nav.html' import render_nav_item %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-nav mr-auto">
+        {{ render_nav_item('home', 'Home') }}
+        {{ render_nav_item('texttospeech.data', 'Text To Speech') }}
+    </div>
+</nav>

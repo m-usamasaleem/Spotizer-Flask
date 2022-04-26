@@ -1,0 +1,25 @@
+<html lang="en">
+    
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block styles %}
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        <title>Spotizer</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        {% endblock %}
+    </head>
+    <body class="container">
+        {% include 'nav.html' %}
+        {% block content %}
+            <h1>Spotizer</h1>
+        {% endblock %}
+
+        {% block scripts %}
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    background-color: black;
+  }
+
+.container {
+    margin: 0 auto;
+  }
+
+p { 
+    color: white;
+    padding: 10px;
+}
+h2, h3 { 
+    text-align: center ;
+    color: white;
+    padding: 10px;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 40%;
+  }
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    background-color: #af4c4c;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #ef7a7a;
+}
+  
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

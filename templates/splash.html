@@ -1,0 +1,33 @@
+<script>
+    setTimeout(function() {
+        window.location.href = "{{ url_for('pre_signup') }}";
+    }, 2000);
+</script>
+
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0%;
+    }
+    
+    .bg {
+        /* The image used */
+        background-image: url("static/splashlogo.gif");
+        /* background-image: url("static/speaker.gif"); */
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+{% extends 'base.html' %} {% block title %} Spotizer {% endblock %} {% block content %}
+
+<div class="bg" class="img-fluid"></div>
+
+
+  <div class="bg"></div> {% endblock %}
