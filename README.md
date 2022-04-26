@@ -5,6 +5,10 @@ Speaker diarization refers to the process of separating an audio file with vario
 
 ## Installation
 
+
+
+
+
 Create a python virtual enviroment
 
 [Python3 Vitual Enviroments](https://docs.python.org/3/library/venv.html)
@@ -14,7 +18,9 @@ After your enviroment is created and activated, run:
   pip install -r requirements.txt
 ```
 Once the requirements are installed, run:
-```bash
-  cd app/
-  python3 app.py
-```
+## Run Flask server
+* (optional) set flask into development mode. This way changes to the code will update the site automatically
+  * Command on Windows: "set FLASK_ENV=development"
+  * Command on Linux: "export FLASK_ENV=development"
+* Run command "flask run"
+* Navigate to the link printed in the console
